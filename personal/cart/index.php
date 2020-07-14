@@ -3,6 +3,14 @@ define("HIDE_SIDEBAR", true);
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Корзина");
 ?><?$APPLICATION->IncludeComponent(
+	"mynamespace:oneclickorder",
+	"mytemplate",
+	Array(
+		"CACHE_TIME" => "0",
+		"CACHE_TYPE" => "A"
+	)
+);?><br>
+ <?$APPLICATION->IncludeComponent(
 	"bitrix:sale.basket.basket",
 	"bootstrap_v4",
 	Array(
@@ -21,9 +29,4 @@ $APPLICATION->SetTitle("Корзина");
 		"SET_TITLE" => "Y",
 		"TEMPLATE_THEME" => "site"
 	)
-);?><br>
- <?$APPLICATION->IncludeComponent(
-	"mynamespace:oneclickorder",
-	"",
-Array()
 );?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
