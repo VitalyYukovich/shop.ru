@@ -7,6 +7,6 @@
 
 <form id='oneclickorder' action ='<?=$actionPath;?>'>
 	<label for="phone">Введите номер телефона</label>
-	<input type='text' name='phone'>
+	<input type='text' name='phone' required>
 	<input type="submit" value="Оформить заказ">
 </form>
